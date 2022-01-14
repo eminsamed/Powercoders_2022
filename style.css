@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap");
+*
+/*Yazi font tipi secildi*/ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/* vh css ölcü birimidir, daha cok responsive dizaynda kullanilir, bundan
+dolayi px ya da %lik deger kullanilmadi */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  background: #fff;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+.container .left_side {
+  position: relative;
+  background: #003147;
+  padding: 40px;
+}
+.profiletext {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profiletext .imgBx {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profiletext .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+}
+.profiletext h2 {
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+.profiletext h2 span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.contactinfo {
+  padding-top: 40px;
+}
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.contactinfo ul {
+  position: relative;
+}
+.contactinfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.contactinfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #03a9f4;
+}
+.contactinfo ul li span {
+  color: #fff;
+  font-weight: 300;
+}
+.contactinfo.education li {
+  margin-bottom: 15px;
+}
+.contactinfo.education h5 {
+  color: #03a9f4;
+  font-weight: 500;
+}
+.contactinfo.education h4:nth-child(2) {
+  color: #fff;
+  font-weight: 500;
+}
+.contactinfo.education h4 {
+  color: #fff;
+  font-weight: 300;
+}
+.contactinfo.language .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #081921;
+  display: block;
+  margin-top: 5px;
+}
+.contactinfo.language .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+
+.container .right_side {
+  position: relative;
+  background: #fff;
+  padding: 40px;
+}
+.about {
+  margin-bottom: 50px;
+}
+.about:last-child {
+  margin-bottom: 0;
+}
+.title2 {
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #333;
+}
+.about .box {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+.about .box .year_company {
+  min-width: 150px;
+}
+.about .box .year_company {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+.about .box .text h4 {
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-size: 16px;
+}
+.skills .box {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.skills .box h4 {
+  text-transform: uppercase;
+  color: #848c99;
+  font-weight: 500;
+}
+.skills .box .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #f0f0f0;
+}
+.skills .box .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+.interest ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.interest ul li {
+  list-style: none;
+  color: #333;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.interest ul li .fa {
+  color: #03a9f4;
+  font-size: 18px;
+  width: 20px;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+.contact .li_wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.contact .li_wrap .icon {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+.contact .li_wrap .text {
+  width: calc(100% - 50px);
+  word-break: break-word;
+  color: #fff;
+}
+
+.skills ul,
+.hobbies ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills .li_wrap,
+.hobbies .li_wrap {
+  width: 100px;
+  height: 100px;
+  margin-top: 15px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills .li_wrap {
+  background: #fff;
+}
+.skills .li_wrap .text,
+.hobbies .li_wrap .text {
+  margin-top: 5px;
+}
+.hobbies .li_wrap {
+  border: 2px solid #fff;
+}
+
+.hobbies .li_wrap .icon,
+.hobbies .li_wrap .text {
+  color: #fff;
+}
+.hobbies .li_wrap:hover {
+  background: #fff;
+}
+.hobbies .li_wrap:hover .icon,
+.hobbies .li_wrap:hover .text {
+  color: #03a9f4;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  border-bottom: 1px solid black;
+}
+.tab {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: 28px;
+
+  width: 150px;
+  padding: 0px;
+  padding-bottom: 0%;
+}
+
+.tab.active {
+  background-color: #accddc;
+  border-radius: 5%;
+}
+
+.tab:hover {
+  background-color: #accddc;
+  border-radius: 5%;
+}
+
+.right_inner {
+  margin-top: 40px;
+  line-height: 25px;
+}
+.exp_wrap {
+  color: black;
+}
+
+.right_inner .li_wrap {
+  display: flex;
+  margin-bottom: 15px;
+}
+.right_inner .li_wrap .date {
+  width: 125px;
+  color: #003147;
+}
+
+.right_inner .li_wrap .info {
+  width: calc(100% - 125px);
+  padding-left: 25px;
+  position: relative;
+}
+.right_inner .li_wrap .info_title {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #003147;
+}
+.right_inner .li_wrap .com {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 3px;
+}
+.right_inner .li_wrap .info_cont {
+  margin-top: 15px;
+}
+.right_inner .li_wrap .info::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #003147;
+  border-radius: 50%;
+}
+.right_inner .li_wrap .info::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  width: 2px;
+  height: 90%;
+  background: #003147;
+}
