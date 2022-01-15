@@ -366,3 +366,7 @@ p {
   height: 90%;
   background: #003147;
 }
+#sort-down {
+  display: flex;
+  flex-direction: column;
+}
