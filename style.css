@@ -13,8 +13,7 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-/* vh css ölcü birimidir, daha cok responsive dizaynda kullanilir, bundan
-dolayi px ya da %lik deger kullanilmadi */
+
 .container {
   position: relative;
   width: 100%;
